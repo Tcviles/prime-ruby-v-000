@@ -2,6 +2,10 @@ require'pry'
 
 def prime?(number)
   range= (2...number.abs).to_a
-  answer = range.find {|d| (number.abs % d == 0)}
+  if number = 1 
+    set answer = true
+  else
+    answer = range.find {|d| (number.abs % d == 0)}
+  end
   return (answer.nil?)
 end
